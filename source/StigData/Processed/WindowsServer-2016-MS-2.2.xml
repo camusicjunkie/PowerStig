@@ -1,4 +1,4 @@
-<DISASTIG version="2" classification="UNCLASSIFIED" customname="" stigid="Windows_Server_2016_MS_STIG" description="This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DoD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil." filename="U_MS_Windows_Server_2016_MS_STIG_V2R2_Manual-xccdf.xml" releaseinfo="Release: 2 Benchmark Date: 04 May 2021 3.2.2.36079 1.10.0" title="Microsoft Windows Server 2016 Security Technical Implementation Guide" notice="terms-of-use" source="STIG.DOD.MIL" fullversion="2.2" created="5/26/2021">
+<DISASTIG version="2" classification="UNCLASSIFIED" customname="" stigid="Windows_Server_2016_MS_STIG" description="This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DoD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil." filename="U_MS_Windows_Server_2016_MS_STIG_V2R2_Manual-xccdf.xml" releaseinfo="Release: 2 Benchmark Date: 04 May 2021 3.2.2.36079 1.10.0" title="Microsoft Windows Server 2016 Security Technical Implementation Guide" notice="terms-of-use" source="STIG.DOD.MIL" fullversion="2.2" created="6/1/2021">
   <AccountPolicyRule dscresourcemodule="SecurityPolicyDsc">
     <Rule id="V-224866" severity="medium" conversionstatus="pass" title="SRG-OS-000329-GPOS-00128" dscresource="AccountPolicy">
       <Description>&lt;VulnDiscussion&gt;The account lockout feature, when enabled, prevents brute-force password attacks on the system. This parameter specifies the period of time that an account will remain locked after the specified number of failed logon attempts.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</Description>
@@ -1454,31 +1454,6 @@ TPM Manufacturer Information - Specific Version = 2.0 or 1.2
 
 If a TPM is not found or is not ready for use, this is a finding.</RawString>
     </Rule>
-    <Rule id="V-224829" severity="high" conversionstatus="pass" title="SRG-OS-000480-GPOS-00227" dscresource="None">
-      <Description>&lt;VulnDiscussion&gt;Malicious software can establish a base on individual desktops and servers. Employing an automated mechanism to detect this type of software will aid in elimination of the software from the operating system.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</Description>
-      <DuplicateOf />
-      <IsNullOrEmpty>False</IsNullOrEmpty>
-      <LegacyId>V-73241</LegacyId>
-      <OrganizationValueRequired>False</OrganizationValueRequired>
-      <OrganizationValueTestString />
-      <RawString>Verify an anti-virus solution is installed on the system. The anti-virus solution may be bundled with an approved host-based security solution.
-
-If there is no anti-virus solution installed on the system, this is a finding.
-
-Verify if Windows Defender is in use or enabled:
-
-Open "PowerShell".
-
-Enter "get-service | where {$_.DisplayName -Like "*Defender*"} | Select Status,DisplayNameâ€
-
-Verify if third-party anti-virus is in use or enabled:
-
-Open "PowerShell".
-
-Enter "get-service | where {$_.DisplayName -Like "*mcafee*"} | Select Status,DisplayNameâ€
-
-Enter "get-service | where {$_.DisplayName -Like "*symantec*"} | Select Status,DisplayNameâ€</RawString>
-    </Rule>
     <Rule id="V-224838" severity="medium" conversionstatus="pass" title="SRG-OS-000104-GPOS-00051" dscresource="None">
       <Description>&lt;VulnDiscussion&gt;The lack of password protection enables anyone to gain access to the information system, which opens a backdoor opportunity for intruders to compromise the system as well as other resources. Accounts on a system must require passwords.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</Description>
       <DuplicateOf />
@@ -1604,19 +1579,6 @@ Satisfies: SRG-OS-000425-GPOS-00189, SRG-OS-000426-GPOS-00190&lt;/VulnDiscussion
       <RawString>If the data owner has a strict requirement for ensuring data integrity and confidentiality is maintained at every step of the data transfer and handling process, verify protection methods such as TLS, encrypted VPNs, or IPsec have been implemented.
 
 If protection methods have not been implemented, this is a finding.</RawString>
-    </Rule>
-    <Rule id="V-224846" severity="medium" conversionstatus="pass" title="SRG-OS-000480-GPOS-00227" dscresource="None">
-      <Description>&lt;VulnDiscussion&gt;A firewall provides a line of defense against attack, allowing or blocking inbound and outbound connections based on a set of rules.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</Description>
-      <DuplicateOf />
-      <IsNullOrEmpty>False</IsNullOrEmpty>
-      <LegacyId>V-73279</LegacyId>
-      <OrganizationValueRequired>False</OrganizationValueRequired>
-      <OrganizationValueTestString />
-      <RawString>Determine if a host-based firewall is installed and enabled on the system.
-
-If a host-based firewall is not installed and enabled on the system, this is a finding.
-
-The configuration requirements will be determined by the applicable firewall STIG.</RawString>
     </Rule>
     <Rule id="V-224848" severity="medium" conversionstatus="pass" title="SRG-OS-000002-GPOS-00002" dscresource="None">
       <Description>&lt;VulnDiscussion&gt;If temporary user accounts remain active when no longer needed or for an excessive period, these accounts may be used to gain unauthorized access. To mitigate this risk, automated termination of all temporary accounts must be set upon account creation.
@@ -2183,7 +2145,7 @@ Viewing in File Explorer:
 For each folder, view the Properties.
 Select the "Security" tab, and the "Advanced" button.
 Default permissions:
-\Program Files
+\Program Files 
 Type - "Allow" for all
 Inherited from - "None" for all
 Principal - Access - Applies to
@@ -5449,6 +5411,58 @@ If the value for "Network access: Allow anonymous SID/Name translation" is not s
 </RawString>
     </Rule>
   </SecurityOptionRule>
+  <ServiceRule dscresourcemodule="PSDscResources">
+    <Rule id="V-224829" severity="high" conversionstatus="pass" title="SRG-OS-000480-GPOS-00227" dscresource="Service">
+      <Description>&lt;VulnDiscussion&gt;Malicious software can establish a base on individual desktops and servers. Employing an automated mechanism to detect this type of software will aid in elimination of the software from the operating system.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</Description>
+      <DuplicateOf />
+      <Ensure>Present</Ensure>
+      <IsNullOrEmpty>False</IsNullOrEmpty>
+      <LegacyId>V-73241</LegacyId>
+      <OrganizationValueRequired>True</OrganizationValueRequired>
+      <OrganizationValueTestString>ServiceName/StartupType is populated with correct AntiVirus service information</OrganizationValueTestString>
+      <RawString>Verify an anti-virus solution is installed on the system. The anti-virus solution may be bundled with an approved host-based security solution.
+
+If there is no anti-virus solution installed on the system, this is a finding.
+
+Verify if Windows Defender is in use or enabled:
+
+Open "PowerShell".
+
+Enter "get-service | where {$_.DisplayName -Like "*Defender*"} | Select Status,DisplayNameâ€
+
+Verify if third-party anti-virus is in use or enabled:
+
+Open "PowerShell".
+
+Enter "get-service | where {$_.DisplayName -Like "*mcafee*"} | Select Status,DisplayNameâ€
+
+Enter "get-service | where {$_.DisplayName -Like "*symantec*"} | Select Status,DisplayNameâ€</RawString>
+      <ServiceName>
+      </ServiceName>
+      <ServiceState>Running</ServiceState>
+      <StartupType>
+      </StartupType>
+    </Rule>
+    <Rule id="V-224846" severity="medium" conversionstatus="pass" title="SRG-OS-000480-GPOS-00227" dscresource="Service">
+      <Description>&lt;VulnDiscussion&gt;A firewall provides a line of defense against attack, allowing or blocking inbound and outbound connections based on a set of rules.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</Description>
+      <DuplicateOf />
+      <Ensure>Present</Ensure>
+      <IsNullOrEmpty>False</IsNullOrEmpty>
+      <LegacyId>V-73279</LegacyId>
+      <OrganizationValueRequired>True</OrganizationValueRequired>
+      <OrganizationValueTestString>ServiceName/StartupType is populated with correct Firewall service information</OrganizationValueTestString>
+      <RawString>Determine if a host-based firewall is installed and enabled on the system.
+
+If a host-based firewall is not installed and enabled on the system, this is a finding.
+
+The configuration requirements will be determined by the applicable firewall STIG.</RawString>
+      <ServiceName>
+      </ServiceName>
+      <ServiceState>Running</ServiceState>
+      <StartupType>
+      </StartupType>
+    </Rule>
+  </ServiceRule>
   <UserRightRule dscresourcemodule="SecurityPolicyDsc">
     <Rule id="V-225014" severity="medium" conversionstatus="pass" title="SRG-OS-000080-GPOS-00048" dscresource="UserRightsAssignment">
       <Constant>SeNetworkLogonRight</Constant>
