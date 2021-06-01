@@ -6,8 +6,12 @@
     associated comment.
 -->
 <OrganizationalSettings fullversion="2.2">
+  <!-- Ensure ServiceName/StartupType is populated with correct AntiVirus service information-->
+  <OrganizationalSetting id="V-224829" ServiceName="" StartupType="" />
+  <!-- Ensure ServiceName/StartupType is populated with correct Firewall service information-->
+  <OrganizationalSetting id="V-224846" ServiceName="" StartupType="" />
   <!-- Ensure ''V-224923.b'' -match '1|3'-->
-  <OrganizationalSetting id="V-224923.b" ValueData="1" />
+    <OrganizationalSetting id="V-224923.b" ValueData="1" />
   <!-- Ensure ''V-224924'' -match '1|3|8|ShouldBeAbsent'-->
   <OrganizationalSetting id="V-224924" ValueData="8" />
   <!-- Ensure ''V-224936'' -match '0|1'-->

@@ -1,4 +1,6 @@
+V-224829::*::HardCodedRule(ServiceRule)@{DscResource = 'Service'; Ensure = 'Present'; ServiceName = $null; ServiceState = 'Running'; StartupType = $null; OrganizationValueTestString = 'ServiceName/StartupType is populated with correct AntiVirus service information'}
 V-224834::\Windows::C:\Windows
+V-224846::*::HardCodedRule(ServiceRule)@{DscResource = 'Service'; Ensure = 'Present'; ServiceName = $null; ServiceState = 'Running'; StartupType = $null; OrganizationValueTestString = 'ServiceName/StartupType is populated with correct Firewall service information'}
 V-224872::"Minimum password length,"::"Minimum password length"
 V-224970::*::''
 V-224971::The following results should be displayed:::C:\Windows\SYSVOL
